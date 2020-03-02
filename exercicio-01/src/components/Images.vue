@@ -1,11 +1,10 @@
 <template>
-    <div>
+    <div id="images">
         <ul>
-            <li v-for="image in images" v-bind:key="image.content">
-                <img {{image.content}}/>
+            <li v-for="list in lists" v-bind:key="list.text">
+                {{list.text}}
             </li>
         </ul>
-                
     </div>    
 </template>
 
@@ -14,33 +13,24 @@ export default {
     name: "Images",
     data(){
         return{
-            images: [
-                {content: {          
-                    alt: "Image 1 ",
-                    src: "#"
-                }},
-
-                {content: {          
-                    alt: "Image",
-                    src: "#"
-                }},
-
-                {content: {          
-                    alt: "Image",
-                    src: "#"
-                }}
+            lists: [
+                {text: "Image 1"},
+                {text: "Image 2"}, 
+                {text: "Image 3"}, 
+                {text: "Image 4"}, 
             ]
         };
-    }
-}
+    }    
+};
 </script>
 
-<style  scoped>
+<style scoped>
    ul{
-        list-style-type: none;                        
+        list-style-type: none;
     }
 
     li{
-        border-style: solid;
+         border-style: solid;
     }
+
 </style>

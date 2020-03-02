@@ -2,7 +2,7 @@
     <div>
         <ul>
             <li v-for="article in articles" v-bind:key="article.content">
-               <article>{{article.content.}}</article>
+               <article>{{article.content.title}}</article>
             </li>
         </ul>
                 
